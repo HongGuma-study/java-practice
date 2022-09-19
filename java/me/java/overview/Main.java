@@ -1,5 +1,7 @@
-public class Hello {
-    public static void main(String[] args){
+package me.java.overview;
+
+public class Main {
+    public static void main(String[] args) {
         System.out.println("Hello Java Word - 1");
         System.out.println("Hello Java Word - 2");
         System.out.println("Hello Java Word - 3");
