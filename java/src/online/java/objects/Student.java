@@ -37,6 +37,11 @@ public class Student{
         this.money -= 1200;
     }
 
+    public void takeTaxi(Taxi taxi, int charge){
+        taxi.take(charge);
+        this.money -= charge;
+    }
+
     public void showMoney(){
         System.out.println(studentName + "의 잔액은 "+money+" 원 입니다.");
     }
