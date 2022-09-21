@@ -1,4 +1,4 @@
-package me.java.DataType;
+package me.java.datatype;
 
 public class FormChangePractice {
     public static void main(String[] args) {
