@@ -1,16 +1,18 @@
 package me.java.forcase;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * 김밥천국 문제
+ * 배열 이용해서 다시 풀어보기
  */
 public class Practice07 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        int menu = 0;
-        int money = 0; //고객의 주머니
+        int[] price = {2500,3000,4000,5000}; //음식 가격 배열
+        int menu = 0; //입력받을 메뉴 번호
+        int money = 0; //고객의 주머니 사정
+        Arrays.sort(price); //최소값이 0번으로 온다.
 
         System.out.printf("고객님의 소지금을 입력해주십시오 >> ");
         money = scanner.nextInt();
@@ -25,44 +27,44 @@ public class Practice07 {
         System.out.println("================");
 
         while(true){
-            if(money < 2500){
-                System.out.println("김밥 천국 이용 불가. 소지금액이 2500원 이하 입니다.");
+            if(money < price[0]){
+                System.out.println("김밥 천국 이용 불가. 소지금액이 "+price[0]+"원 이하 입니다.");
                 break;
             }
             System.out.printf("메뉴 주문 번호 : ");
             menu = scanner.nextInt();
             switch (menu){
                 case 1:
-                    if(money >= 2500){
+                    if(money >= price[0]){
                         System.out.println("김밥을 선택하셨습니다.");
-                        money -= 2500;
+                        money -= price[0];
                         System.out.printf("잔액은 %d 원 입니다.\n",money);
                     }else{
                         System.out.println("구매불가. 소지금이 부족합니다.");
                     }
                     break;
                 case 2:
-                    if(money >= 3000){
+                    if(money >= price[1]){
                         System.out.println("라면을 선택하셨습니다.");
-                        money -= 3000;
+                        money -= price[1];
                         System.out.printf("잔액은 %d 원 입니다.\n",money);
                     }else{
                         System.out.println("구매불가. 소지금이 부족합니다.");
                     }
                     break;
                 case 3:
-                    if(money >= 4000){
+                    if(money >= price[2]){
                         System.out.println("떡볶기를 선택하셨습니다.");
-                        money -= 4000;
+                        money -= price[2];
                         System.out.printf("잔액은 %d 원 입니다.\n",money);
                     }else{
                         System.out.println("구매불가. 소지금이 부족합니다.");
                     }
                     break;
                 case 4:
-                    if(money >= 5000){
+                    if(money >= price[3]){
                         System.out.println("돈까스를 선택하셨습니다.");
-                        money -= 5000;
+                        money -= price[3];
                         System.out.printf("잔액은 %d 원 입니다.\n",money);
                     }else{
                         System.out.println("구매불가. 소지금이 부족합니다.");
