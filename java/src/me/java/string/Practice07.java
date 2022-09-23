@@ -7,13 +7,13 @@ public class Practice07 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); //버퍼 입력
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); //버퍼 출력
-        String REGEX = "[^a-z0-9]+"; //정규표현식 (a-z 문자를 제외한 전부)
+        String REGEX = "[^a-z0-9]+"; //정규표현식 (a-z 문자를 제외한 전부, 공백도 포함임)
         String inputStr = ""; // 입력 받은 문자열
         String reversStr; // 합친 문자열을 뒤집은 문자열
 
-        inputStr = br.readLine().toLowerCase().replaceAll(REGEX,""); //입력받은 문자열에서 정규표현식에 해당하는 문자를 ""로 치환한다.
+        inputStr = br.readLine().toLowerCase().replaceAll(REGEX,""); //입력받은 문자열에서 정규표현식에 해당하는 문자를 ""로 치환한다. (사실상 없애는 것)
         StringBuffer sb = new StringBuffer(inputStr); //합친 문자열을 뒤집기 위해 선언한 string buffer
-        reversStr = sb.reverse().toString(); //문자열 뒤집기
+        reversStr = sb.reverse().toString(); //문자열 뒤집기 (뒤집고 StringBuffe r를 String 으로 바꿔줘야 한다.)
 
         bw.write(String.valueOf(reversStr.equals(inputStr))); // 뒤집은 문자열과 합친 문자열 일치하는지 비교한 결과 출력
         bw.flush();
@@ -29,6 +29,7 @@ public class Practice07 {
         inputStr = s.toLowerCase().replaceAll(REGEX,"");
         StringBuffer sb = new StringBuffer(inputStr);
         reversStr = sb.reverse().toString();
+
 
         return reversStr.equals(inputStr);
     }
