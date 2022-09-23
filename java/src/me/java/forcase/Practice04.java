@@ -6,10 +6,13 @@ package me.java.forcase;
  */
 public class Practice04 {
     public static void main(String[] args) {
+        int cnt = 0;
         for(int i=1; i<=5; i++){
             for(int j=i+1; j<=5; j++){
                 System.out.println("("+i+", "+j+")");
+                cnt++;
             }
         }
+        System.out.println(cnt);
     }
 }

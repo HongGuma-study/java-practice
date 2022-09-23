@@ -11,7 +11,7 @@ public class Practice05 {
             for(int j=1; j<=100; j++){
                 for(int k=1; k<=100; k++){
                     if(i+j > k){
-                        if(Math.pow(k,2) == (Math.pow(i,2)+Math.pow(j,2))) cnt++;
+                        if(i<j && (Math.pow(k,2) == (Math.pow(i,2)+Math.pow(j,2)))) cnt++;
                     }else{
                         break;
                     }
