@@ -1,8 +1,5 @@
 package me.java.arrays;
 
-/**
- * 다시 풀어...
- */
 public class Practice03 {
     public static void main(String[] args) {
         String[] subjects = {"국어","수학","영어"};
