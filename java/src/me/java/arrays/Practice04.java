@@ -1,6 +1,8 @@
 package me.java.arrays;
 
 import java.io.*;
+import java.util.Arrays;
+
 
 public class Practice04 {
     public static void main(String[] args) throws IOException {

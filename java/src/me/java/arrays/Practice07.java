@@ -22,12 +22,12 @@ public class Practice07 {
                 "\t\"secretIdentity\": \"Unknown\",\n" +
                 "\t\"powers\": \"Heat Immunity\"\n" +
                 "}";
-        String[][] outputStr = processJson(inputJson);
+        jsonTable = processJson(inputJson);
         System.out.printf("%20s\t|%20s\t|%20s\t|%20s\t|\n","name","age","secretIdentity","powers");
         System.out.println("================================================================================================");
         int cnt = 0;
-        for(int i=0; i<outputStr.length; i++){
-            System.out.printf("%20s\t|",outputStr[i][1]);
+        for(int i=0; i<jsonTable.length; i++){
+            System.out.printf("%20s\t|",jsonTable[i][1]);
             cnt++;
             if(cnt == 4){
                 System.out.println();
