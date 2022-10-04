@@ -8,11 +8,11 @@ public class Member {
     private int memberSerialNo;
     protected String memberID;
     protected String memberPassword;
-    protected int memberPhoneNumber;
+    protected String memberPhoneNumber;
     protected String memberEmail;
     protected int memberBirthDate;
 
-    public Member(String id, String pw, int phone, String email, int birth){
+    public Member(String id, String pw, String phone, String email, int birth){
         serialNo++;
         this.memberSerialNo = serialNo;
         this.memberID = id;
@@ -42,11 +42,11 @@ public class Member {
         this.memberPassword = memberPassword;
     }
 
-    public int getMemberPhoneNumber() {
+    public String getMemberPhoneNumber() {
         return memberPhoneNumber;
     }
 
-    public void setMemberPhoneNumber(int memberPhoneNumber) {
+    public void setMemberPhoneNumber(String memberPhoneNumber) {
         this.memberPhoneNumber = memberPhoneNumber;
     }
 

@@ -17,7 +17,7 @@ public class Electronic{
         this.companyName = companyName;
         this.dateOfMade = dateOfMade;
         this.authMethod = authMethod;
-//        Electronic(CompanyType.values()[i % CompanyType.values().length]); //enum 값 랜덤으로 받기
+
     }
 
     public static int getSerialNo() {
@@ -67,6 +67,7 @@ public class Electronic{
     public void setAuthMethod(AuthMethod authMethod) {
         this.authMethod = authMethod;
     }
+
 
     @Override
     public boolean equals(Object o) {
