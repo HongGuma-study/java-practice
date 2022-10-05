@@ -61,8 +61,8 @@ public class Circle extends Shape implements GeometricController{
 
     @Override
     public String translate(int dx, int dy) {
-        this.centerPoint.setX(dx);
-        this.centerPoint.setY(dy);
+        this.centerPoint.setX(centerPoint.getX()+dx);
+        this.centerPoint.setY(centerPoint.getY()+dy);
         return "("+this.centerPoint.getX()+", "+this.centerPoint.getY()+")";
     }
 
