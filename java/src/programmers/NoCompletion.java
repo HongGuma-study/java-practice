@@ -9,13 +9,9 @@ public class NoCompletion {
     public static void main(String[] args) {
         String[] participant = {"mislav", "stanko", "mislav", "ana", "mislav"};
         String[] completion = {"stanko", "ana", "mislav", "mislav"};
-        Solution test = new Solution();
-        System.out.println(test.solution(participant,completion));
+        System.out.println(solution(participant,completion));
     }
-}
-
-class Solution {
-    public String solution(String[] participant, String[] completion) {
+    public static String solution(String[] participant, String[] completion) {
         String answer = "";
         HashMap<String,Integer> participantMap = new HashMap<>();
 
@@ -49,20 +45,6 @@ class Solution {
         return answer;
 
     }
- /*   public String solution(String[] participant, String[] completion) {
-        String answer = "";
-        ArrayList<String> pArr = new ArrayList<>(Arrays.asList(participant));
-        ArrayList<String> cArr = new ArrayList<>(Arrays.asList(completion));
-        Collections.sort(pArr);
-        Collections.sort(cArr);
-
-        for(int i=0; i<cArr.size(); i++){
-            if(pArr.get(i) != cArr.get(i)){
-                answer = pArr.get(i);
-            }
-        }
-
-
-        return answer;
-    }*/
 }
+
+
