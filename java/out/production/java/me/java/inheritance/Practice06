@@ -1,0 +1,19 @@
+1. 하나의 인스턴스 InterfaceA가 있다고 가정하자.
+
+    `InterfaceA ia = new InterfaceA() (O)`
+
+2. 하나의 추상 클래스 AbstractClass가 있다고 가정하자.
+
+    `AbstractClass a = new AbstractClass() (X)`
+
+3. 부모클래스 A를 상속하고 있는 자식 클래스 B가 있다고 가정하자. (B is A)
+
+    `A a = new B() (O)`
+
+4. 인터페이스 InterfaceA를 구현하고 있는 구현 클래스 ImplementClassB가 있다고 가정하자.
+
+    `InterfaceA ia = new ImplementClassB() (X)`
+
+5. 클래스 B의 필드로 클래스 A를 포함하고 있다고 가정하자. (B has a A)
+
+    `A a = new B() (X)`
