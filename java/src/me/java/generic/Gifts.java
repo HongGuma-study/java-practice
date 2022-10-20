@@ -45,7 +45,9 @@ public class Gifts<T extends Item> {
     }
 
     public void add(int i, T element) {
+        //TODO : Exception ) add index 10 out of bounds for length 10
         T[] tmp = (T[]) new Item[gifts.length+1];
+
         for(int n=0; n<gifts.length+1; n++){
             if(n == i){
                 tmp[n] = element;
@@ -56,10 +58,23 @@ public class Gifts<T extends Item> {
 
     public void clear() {
         this.gifts = null;
+        this.size = 0;
+        this.count = 0;
     }
 
     public void pop() {
-        this.gifts[gifts.length-1] = null;
+        T[] tmp = (T[]) new Item[this.gifts.length];
+        int cnt = 0;
+        for(T gift : gifts){
+            if(gift != null){
+                cnt++;
+            }
+        }
+        for(int i=0; i<gifts.length; i++){
+            if(i == cnt) break;
+            tmp[i] = gifts[i];
+        }
+        this.gifts = tmp;
     }
 
     public void remove(int i ) {
@@ -141,5 +156,20 @@ public class Gifts<T extends Item> {
                 ", gifts=" + Arrays.toString(gifts) +
                 ", count=" + count +
                 '}';
+    }
+
+    public void trimToSize() {
+        gifts = Arrays.copyOf(gifts, count);
+    }
+
+    public void print() {
+        if (count == 0) {
+            System.out.println("Nothing to print in array.");
+            return;
+        }
+
+        for (int i = 0; i < count; i++) {
+            System.out.println(gifts[i]);
+        }
     }
 }
